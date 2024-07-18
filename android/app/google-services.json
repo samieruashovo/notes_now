@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "514385231043",
+    "project_id": "notesapp2-3183d",
+    "storage_bucket": "notesapp2-3183d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514385231043:android:986596dc706031f4937676",
+        "android_client_info": {
+          "package_name": "com.example.notenow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkR2O0lE1IOKXGskT_KDFgeHoft9ddRAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
