@@ -1,10 +1,35 @@
-=## Features of the application
+This is a notes application built using Flutter. The app supports both online and offline storage of notes, with synchronization to Firebase Firestore when online.
 
-- Creading, editing and deleting notes. Each note has a title, content and a colored label assigned to it.
-- Online sync with Firebase Firestore.
-- Offline storage of notes using [sqflite](https://pub.dev/packages/sqflite). Notes are stored offline for persistence accross restarts until the user switches to online sync. Then only online sync.
-- Searching for notes based on title and content.
-- A theme switcher to switch between dark and light theme. The user's preference is saved among app restarts using [shared_prederences](https://pub.dev/packages/shared_preferences).
+## Features
+
+- Create, read, update, and delete notes.
+- Dark mode support.
+- Firebase Authentication.
+- Offline storage with SQLite.
+- Data synchronization with Firebase Firestore.
+
+## State Management
+
+This application uses the `provider` package for state management. Provider is a recommended approach to managing state in Flutter applications as it is easy to use, efficient, and highly scalable.
+
+### Why Provider?
+
+- **Simple to Use**: Provider makes it easy to manage and listen to state changes.
+- **Optimized Performance**: It only rebuilds the parts of the widget tree that need to be rebuilt.
+- **Scalable**: Suitable for small to large scale applications.
+
+### Implementation
+
+The state of the application is managed in the `AppState` class, which extends `ChangeNotifier`. This class handles all the business logic, including reading, saving, and deleting notes, managing user authentication, and handling theme preferences.
+
+#### AppState Class
+
+The `AppState` class is the central point of state management in this application. Here are some of the key responsibilities of this class:
+
+- **Initialization**: Initializes Firebase, SharedPreferences, and sets the theme.
+- **Theme Management**: Toggles between dark and light themes.
+- **Note Management**: CRUD operations for notes, either locally using SQLite or remotely using Firebase Firestore.
+- **User Authentication**: Handles user login, registration, and data migration from local storage to Firestore.
 
 ## A demo of creating notes
 
